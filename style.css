@@ -100,9 +100,11 @@ header button:hover {
 main {
   flex: 1;
   margin-left: 220px;
-  padding: 130px 40px 40px; /* <-- fixes the hidden toolbar */
+  padding: 130px 10px 40px 10px; /* tiny side padding */
+  width: calc(100% - 220px);
   overflow-y: auto;
 }
+
 
 /* -----------------------------------------
    TOOLBAR
