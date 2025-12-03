@@ -1,29 +1,18 @@
-/* -----------------------------------------
-   GLOBAL STYLE
------------------------------------------- */
-
+/* GLOBAL */
 body {
   margin: 0;
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   background: #f7f7fb;
   color: #333;
 
-  display: flex;        /* keep horizontal flex */
-  flex-direction: row;  /* main & sidebar in a row */
-  min-height: 100vh;    /* allow vertical expansion */
-  width: 100vw;         /* full width of screen */
-  overflow: hidden;     /* prevent scrollbars on body */
+  display: block;
 }
 
-
-/* -----------------------------------------
-   HEADER
------------------------------------------- */
-
+/* HEADER */
 header {
   width: 100%;
   padding: 12px 20px;
-  background: #ffffff;
+  background: #fff;
   border-bottom: 1px solid #ddd;
   display: flex;
   align-items: center;
@@ -40,36 +29,60 @@ header h1 {
   margin: 0;
 }
 
-header select,
-header button {
-  padding: 8px 12px;
+/* CHAPTER PANEL */
+#chaptersPanel {
+  position: fixed;
+  top: 65px; /* header height */
+  left: 0;
+  width: 220px;
+  bottom: 0;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+/* MAIN AREA */
+main {
+  margin-left: 220px; /* leave space for sidebar */
+  padding: 130px 20px 40px 20px; /* top, right, bottom, left */
+}
+
+/* TOOLBAR */
+#toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#toolbar button {
+  padding: 6px 10px;
+  font-size: 16px;
   border-radius: 6px;
   border: 1px solid #bbb;
   background: #fff;
   cursor: pointer;
 }
 
-header button:hover {
+#toolbar button:hover {
   background: #eee;
 }
 
-/* -----------------------------------------
-   CHAPTER PANEL
------------------------------------------- */
+/* EDITOR */
+#editor {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 70vh;
+  box-shadow: 0 0 10px rgba(0,0,0,0.07);
+  font-size: 18px;
+  line-height: 1.6;
 
-#chaptersPanel {
-  width: 220px;
-  background: #ffffff;
-  padding: 80px 15px 15px;
-  border-right: 1px solid #ddd;
-  overflow-y: auto;
+  width: 100%;           /* fills main */
+  box-sizing: border-box;
 }
 
-#chaptersPanel h2 {
-  font-size: 16px;
-  margin-top: 0;
-}
-
+/* CHAPTER LIST */
 #chapterList li {
   list-style: none;
   padding: 8px;
@@ -96,65 +109,4 @@ header button:hover {
 
 #newChapterBtn:hover {
   background: #4749d8;
-}
-
-/* -----------------------------------------
-   MAIN WRITING AREA
------------------------------------------- */
-
-main {
-  flex: 1;                      /* takes all space next to sidebar */
-  margin-left: 220px;           /* keeps space for chapter panel */
-  padding: 130px 20px 40px 20px; 
-  overflow-y: auto;
-}
-
-
-
-/* -----------------------------------------
-   TOOLBAR
------------------------------------------- */
-
-#toolbar {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-#toolbar button {
-  padding: 6px 10px;
-  font-size: 16px;
-  border-radius: 6px;
-  border: 1px solid #bbb;
-  background: #fff;
-  cursor: pointer;
-}
-
-#toolbar button:hover {
-  background: #eee;
-}
-
-/* -----------------------------------------
-   EDITOR
------------------------------------------- */
-
-#editor {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  min-height: 70vh;
-  box-shadow: 0 0 10px rgba(0,0,0,0.07);
-  font-size: 18px;
-  line-height: 1.6;
-
-  width: 100%;          
-  box-sizing: border-box; 
-}
-
-
-
-#editor:focus {
-  outline: none;
-  border: 1px solid #959aff;
-  box-shadow: 0 0 4px #b5b9ff;
 }
