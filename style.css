@@ -69,3 +69,80 @@ header button:hover {
   list-style: none;
   padding: 8px;
   margin-bottom: 5px
+  border-radius: 5px;
+  background: #f2f2f6;
+  cursor: pointer;
+}
+
+#chapterList li:hover {
+  background: #e2e2ef;
+}
+
+#newChapterBtn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #595cff;
+  color: white;
+  cursor: pointer;
+}
+
+#newChapterBtn:hover {
+  background: #4749d8;
+}
+
+/* -----------------------------------------
+   MAIN WRITING AREA
+------------------------------------------ */
+
+main {
+  flex: 1;
+  margin-left: 220px;
+  padding: 130px 40px 40px; /* <-- fixes the hidden toolbar */
+  overflow-y: auto;
+}
+
+/* -----------------------------------------
+   TOOLBAR
+------------------------------------------ */
+
+#toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#toolbar button {
+  padding: 6px 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  background: #fff;
+  cursor: pointer;
+}
+
+#toolbar button:hover {
+  background: #eee;
+}
+
+/* -----------------------------------------
+   EDITOR
+------------------------------------------ */
+
+#editor {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 70vh;
+  box-shadow: 0 0 10px rgba(0,0,0,0.07);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+#editor:focus {
+  outline: none;
+  border: 1px solid #959aff;
+  box-shadow: 0 0 4px #b5b9ff;
+}
