@@ -45,8 +45,9 @@ header h1 {
 /* MAIN AREA */
 main {
   margin-left: 220px; /* leave space for sidebar */
-  padding: 130px 20px 40px 20px; /* top, right, bottom, left */
+  padding: 80px 20px 40px 20px; /* top = header height */
 }
+
 
 /* TOOLBAR */
 #toolbar {
