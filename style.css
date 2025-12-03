@@ -7,9 +7,14 @@ body {
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   background: #f7f7fb;
   color: #333;
-  display: flex;
-  height: 100vh;
+
+  display: flex;        /* keep horizontal flex */
+  flex-direction: row;  /* main & sidebar in a row */
+  min-height: 100vh;    /* allow vertical expansion */
+  width: 100vw;         /* full width of screen */
+  overflow: hidden;     /* prevent scrollbars on body */
 }
+
 
 /* -----------------------------------------
    HEADER
