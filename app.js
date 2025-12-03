@@ -97,3 +97,10 @@ editor.oninput = () => {
 // initialize
 refreshProjects();
 refreshChapters();
+function format(command) {
+  if (command === "h1" || command === "h2") {
+    document.execCommand("formatBlock", false, command);
+  } else {
+    document.execCommand(command, false, null);
+  }
+}
