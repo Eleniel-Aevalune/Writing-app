@@ -1,15 +1,21 @@
-/* GLOBAL */
+/* BODY */
 body {
   margin: 0;
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   background: #f7f7fb;
   color: #333;
-
-  display: block;
+  
+  display: flex;            /* horizontal layout */
+  flex-direction: row;
+  height: 100vh;            /* full viewport height */
+  overflow: hidden;
 }
 
 /* HEADER */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   padding: 12px 20px;
   background: #fff;
@@ -17,37 +23,25 @@ header {
   display: flex;
   align-items: center;
   gap: 15px;
-  position: fixed;
-  top: 0;
-  left: 0;
   z-index: 100;
 }
 
-header h1 {
-  font-size: 20px;
-  font-weight: 600;
-  margin: 0;
-}
-
-/* CHAPTER PANEL */
+/* CHAPTER PANEL / SIDEBAR */
 #chaptersPanel {
-  position: fixed;
-  top: 65px; /* header height */
-  left: 0;
   width: 220px;
-  bottom: 0;
   background: #fff;
   border-right: 1px solid #ddd;
-  padding: 10px;
+  padding: 80px 10px 10px 10px; /* top padding to push below header */
+  overflow-y: auto;
+  flex-shrink: 0; /* prevents shrinking */
+}
+
+/* MAIN WRITING AREA */
+main {
+  flex: 1; /* takes remaining horizontal space */
+  padding: 80px 20px 40px 20px; /* top = header height */
   overflow-y: auto;
 }
-
-/* MAIN AREA */
-main {
-  margin-left: 220px; /* leave space for sidebar */
-  padding: 80px 20px 40px 20px; /* top = header height */
-}
-
 
 /* TOOLBAR */
 #toolbar {
@@ -56,58 +50,15 @@ main {
   margin-bottom: 10px;
 }
 
-#toolbar button {
-  padding: 6px 10px;
-  font-size: 16px;
-  border-radius: 6px;
-  border: 1px solid #bbb;
-  background: #fff;
-  cursor: pointer;
-}
-
-#toolbar button:hover {
-  background: #eee;
-}
-
 /* EDITOR */
 #editor {
   background: white;
   padding: 20px;
   border-radius: 10px;
-  min-height: 70vh;
+  min-height: calc(100vh - 120px); /* header + bottom padding */
   box-shadow: 0 0 10px rgba(0,0,0,0.07);
   font-size: 18px;
   line-height: 1.6;
-
-  width: 100%;           /* fills main */
-  box-sizing: border-box;
-}
-
-/* CHAPTER LIST */
-#chapterList li {
-  list-style: none;
-  padding: 8px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  background: #f2f2f6;
-  cursor: pointer;
-}
-
-#chapterList li:hover {
-  background: #e2e2ef;
-}
-
-#newChapterBtn {
   width: 100%;
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 6px;
-  border: none;
-  background: #595cff;
-  color: white;
-  cursor: pointer;
-}
-
-#newChapterBtn:hover {
-  background: #4749d8;
+  box-sizing: border-box;
 }
