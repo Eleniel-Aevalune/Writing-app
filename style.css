@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background: #eee;
+  display: flex;
+  gap: 10px;
+}
+
+#chaptersPanel {
+  margin-top: 60px;
+  width: 200px;
+  border-right: 1px solid #ccc;
+  padding: 10px;
+}
+
+main {
+  flex: 1;
+  margin-top: 60px;
+  padding: 10px;
+}
+
+#editor {
+  width: 100%;
+  height: calc(100vh - 80px);
+  font-size: 16px;
+}
