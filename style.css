@@ -68,7 +68,7 @@ header button:hover {
 #chapterList li {
   list-style: none;
   padding: 8px;
-  margin-bottom: 5px
+  margin-bottom: 5px;
   border-radius: 5px;
   background: #f2f2f6;
   cursor: pointer;
