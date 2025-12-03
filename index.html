@@ -1,37 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>My Writing App</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
 <body>
+  <header>
+    <h1>My Writing App</h1>
+    <select id="projectSelect"></select>
+    <button id="newProjectBtn">New Project</button>
+  </header>
 
-<header>
-  <h1>My Writing App</h1>
+  <aside id="chaptersPanel">
+    <h2>Chapters</h2>
+    <ul id="chapterList"></ul>
+    <button id="newChapterBtn">New Chapter</button>
+  </aside>
 
-  <select id="projectSelect"></select>
-  <button id="newProjectBtn">New Project</button>
-</header>
+  <main>
+    <div id="toolbar">
+      <button onclick="format('bold')"><b>B</b></button>
+      <button onclick="format('italic')"><i>I</i></button>
+      <button onclick="format('underline')"><u>U</u></button>
+      <button onclick="format('h1')">H1</button>
+      <button onclick="format('h2')">H2</button>
+    </div>
 
-<aside id="chaptersPanel">
-  <h2>Chapters</h2>
-  <ul id="chapterList"></ul>
-  <button id="newChapterBtn">New Chapter</button>
-</aside>
+    <div id="editor" contenteditable="true">Start writing...</div>
+  </main>
 
-<main>
-  <div id="toolbar">
-    <button onclick="format('bold')"><b>B</b></button>
-    <button onclick="format('italic')"><i>I</i></button>
-    <button onclick="format('underline')"><u>U</u></button>
-    <button onclick="format('h1')">H1</button>
-    <button onclick="format('h2')">H2</button>
-  </div>
-
-  <div id="editor" contenteditable="true">Start writing...</div>
-</main>
-
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
-</html>
