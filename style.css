@@ -147,11 +147,10 @@ main {
   font-size: 18px;
   line-height: 1.6;
 
-  width: 100%; 
-  max-width: 1200px;     /* optional: keeps lines readable on huge screens */
-  margin: 0 auto;        /* centers editor if screen is wide */
-  box-sizing: border-box;
+  width: 100%;          
+  box-sizing: border-box; 
 }
+
 
 
 #editor:focus {
