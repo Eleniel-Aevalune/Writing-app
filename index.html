@@ -5,23 +5,25 @@
     <button id="newProjectBtn">New Project</button>
   </header>
 
-  <aside id="chaptersPanel">
-    <h2>Chapters</h2>
-    <ul id="chapterList"></ul>
-    <button id="newChapterBtn">New Chapter</button>
-  </aside>
+  <div id="appContainer">
+    <aside id="chaptersPanel">
+      <h2>Chapters</h2>
+      <ul id="chapterList"></ul>
+      <button id="newChapterBtn">New Chapter</button>
+    </aside>
 
-  <main>
-    <div id="toolbar">
-      <button onclick="format('bold')"><b>B</b></button>
-      <button onclick="format('italic')"><i>I</i></button>
-      <button onclick="format('underline')"><u>U</u></button>
-      <button onclick="format('h1')">H1</button>
-      <button onclick="format('h2')">H2</button>
-    </div>
+    <main>
+      <div id="toolbar">
+        <button onclick="format('bold')"><b>B</b></button>
+        <button onclick="format('italic')"><i>I</i></button>
+        <button onclick="format('underline')"><u>U</u></button>
+        <button onclick="format('h1')">H1</button>
+        <button onclick="format('h2')">H2</button>
+      </div>
 
-    <div id="editor" contenteditable="true">Start writing...</div>
-  </main>
+      <div id="editor" contenteditable="true">Start writing...</div>
+    </main>
+  </div>
 
   <script src="app.js"></script>
 </body>
