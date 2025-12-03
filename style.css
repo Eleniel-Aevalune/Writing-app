@@ -103,12 +103,12 @@ header button:hover {
 ------------------------------------------ */
 
 main {
-  flex: 1;
-  margin-left: 220px;
-  padding: 130px 10px 40px 10px; /* tiny side padding */
-  width: calc(100% - 220px);
+  flex: 1;                      /* takes all space next to sidebar */
+  margin-left: 220px;           /* keeps space for chapter panel */
+  padding: 130px 20px 40px 20px; 
   overflow-y: auto;
 }
+
 
 
 /* -----------------------------------------
