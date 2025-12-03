@@ -21,7 +21,18 @@
 </aside>
 
 <main>
-  <textarea id="editor" placeholder="Start writing..."></textarea>
+  <main>
+  <div id="toolbar">
+    <button onclick="format('bold')"><b>B</b></button>
+    <button onclick="format('italic')"><i>I</i></button>
+    <button onclick="format('underline')"><u>U</u></button>
+    <button onclick="format('h1')">H1</button>
+    <button onclick="format('h2')">H2</button>
+  </div>
+
+  <div id="editor" contenteditable="true">Start writing...</div>
+</main>
+
 </main>
 
 <script src="app.js"></script>
